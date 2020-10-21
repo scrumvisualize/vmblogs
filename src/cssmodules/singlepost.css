@@ -1,0 +1,120 @@
+.post__back {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 1rem;
+    text-decoration: none;
+    transition: background-color ease 200ms;
+    position: sticky;
+    top: 0;
+    margin-top: 5px;
+    padding-bottom: 40px;
+  }
+  
+  .post__back:hover {
+    background-color: rgb(106, 125, 168);
+    color: #f4f4f4;
+  }
+  
+  .post {
+    position: relative;
+    background-color: #fff;
+  }
+  
+  .post__intro,
+  .post__body {
+    padding: 1rem 5rem;
+  }
+  
+  .post__intro {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .post__intro__desc {
+    max-width: 900px;
+  }
+  
+  .post__intro__img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .post__body {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .post__body p {
+    font-size: 1.1rem;
+    line-height: 28px;
+  }
+
+  .noSearchData{
+    text-align: center;
+  }
+  .post__intro small {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #blog h3 p{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .singlePost {
+    display: inline-table;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    height: 100%;
+    width: 80%;
+    margin-left: 120px;
+  }
+
+
+  @media only screen and (max-width: 480px){
+
+    .post__back {
+      display: block;
+      width: 90%;
+      height: 50px;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background-color ease 200ms;
+      position: sticky;
+      top: 0;
+      margin-top: 5px;
+      padding-bottom: 40px;
+  }
+  
+  .wrap {
+    display: inline-block;
+    width: 90%;
+}
+  .singlePost {
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    margin: 10px 5px 10px 10px;
+}
+
+.post__intro,
+  .post__body {
+    width: 94%;
+    padding: 0.5rem 1rem;
+  }
+  
+  
+  }

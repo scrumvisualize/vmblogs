@@ -1,0 +1,343 @@
+
+* {
+    box-sizing: border-box;
+  }
+  .App {
+    text-align: center;
+  }
+
+  .logo_image img{
+    float: left;
+    padding-left: 10px;
+    padding-top: 3px;
+    margin-left: 0px;
+    width: 30px;
+  }
+  .siteNavigation_nav_links{
+    width:100%;
+  }
+  .mob_link{
+      margin: 0px 20px 10px 0px;
+  }
+
+  .column {
+    float: left;
+    padding: 10px;
+  }
+  
+  .left {
+    width: 16%;
+    height:650px;
+    background-color:#ebeced;
+    margin: 20px 5px 0px 30px;
+  }
+  
+  .right {
+    width: 79%;
+    height:650px;
+    background-color: #ebeced;
+    margin: 20px 10px 0px 10px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.column-center{ 
+    display: inline-block;
+    width: 30%;
+    background-color: #f27498;
+    height: 200px;
+    margin: 20px 0px 80px 30px;
+    border-radius: 2px;
+    background: url('/images/arnold-francisca-nPhl2x4fk2s-unsplash.jpg');
+background-size: 300px;
+background-repeat: no-repeat;
+}
+
+.loadingIcon p {
+  height: 100px;
+  margin: 0 auto;
+  font-size: large;
+}
+.various{
+  display: inline-block;
+  background-color: #5bc0de;
+  border-radius: 2px;
+  color: rgb(247, 245, 245);
+  margin: 0px 5px 0px 5px;
+  font-weight: bold;
+  font-size: small;
+  width: 70px;
+  height:20px;
+  padding-left: 5px;
+}
+
+.blogImage{
+  height: 100px;
+  background-size: 100%;
+}
+
+.blogtitle{
+  text-align: center;
+  font-family: Trebuchet MS, sans-serif;
+  font-weight: bold;
+  color: rgb(251, 254, 255);
+  margin-top: 50px;
+  width: 200px;
+  margin-left: 50px;
+}
+
+.blogdescription{
+  display: block;
+  margin-top: 150px;
+  color: rgb(60, 60, 72);
+  opacity: 0.8;
+  padding:0px 0px 3px 10px;
+  text-overflow: ellipsis;
+  width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.blogcreateddate{
+  font-size: small;
+  margin-left: 210px;
+}
+
+.col1 {
+  width: 80px;
+  border-radius: 20px;
+  background-color:#5bc0de;
+  color: #ebeced;
+  font-weight: bold;
+  font-size: small;
+  padding:0px 0px 3px 5px;
+  float: left;
+}
+.col2 {
+  width: 100px;
+  color: #4c7aa8;
+  font-family: Trebuchet MS, sans-serif;
+  font-weight: bold;
+  font-size: small;
+  float: right;
+  padding:0px 0px 3px 30px;
+}
+.techtags{
+  float: left;
+  margin-right: 3px;
+}
+.techtags a{
+  color: #ffffff;
+  font-weight: bold;
+  font-size: small;
+  padding:0px 5px 3px 3px;
+}
+.techtags a:hover {
+ color: yellow;
+}
+.grouptechtags{
+  width: 50px;
+  height:15px;
+  background-color:#725997;
+  padding:0px 5px 0px 2px;
+}
+.difftags{
+  width: 60px;
+  border-radius: 20px;
+  background-color:#5bc0de;
+  color: #ebeced;
+  font-weight: bold;
+  font-size: small;
+  padding:0px 0px 3px 5px;
+}
+.blogduration{
+  font-size: small;
+  margin: 0px 0px 0px 30px;
+  color: rgb(60, 60, 72);
+}
+.blogmaintile{
+  height: 205px;
+  box-shadow: 0px 5px 8px 2px #888888;
+}
+.bloglongdescription{
+  display:none;
+}
+.reactStunning {
+margin-top: 20px;
+}
+
+.copyright {
+  margin-bottom: 50px;
+}
+
+.noSearchData{
+  margin: 50px 120px 0px 0px;
+}
+.showColorBox{
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+.studyHomeImage img {
+  height: 200px;
+  width: 180px;
+  margin: 140px 0px 0px 2px;
+}
+
+.post-head {
+  padding: 20px 0px;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 10px;
+  background-image: url('/images/bannerimage.jpg');
+  margin-top: 5px;
+}
+
+.align-center h2, p{
+text-align: center;
+margin:0 auto;
+}
+
+
+
+
+@media only screen and (max-width: 1024px){
+
+.post-head {   
+width: 97%;
+padding: 20px 0px;
+background-size: cover;
+background-position: center;
+color: #ffffff;
+position: relative;
+background-image: url(/images/bannerimage.jpg);
+margin: 5px 11px 0px 20px;
+}
+.left {
+  width: 100%;
+  height:650px;
+  background-color:#ebeced;
+  margin: 20px 30px 0px 36px;
+}
+
+.right {
+  width: 100%;
+  height:100%;
+  background-color: #ebeced;
+  margin: 20px 30px 0px 36px;
+}
+
+.studyHomeImage img {
+  width: 97%;
+  margin: 100px 50px 0px 10px;
+}
+.column-center {
+  display: inline-block;
+  width: 100%;
+  background-color: #f27498;
+  height: 200px;
+  margin: 10px 5px 20px 2px;
+  border-radius: 2px;
+  background: url(/images/arnold-francisca-nPhl2x4fk2s-unsplash.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+}
+
+
+@media only screen and (max-width: 480px){
+
+  .logo_image img{
+    float: left;
+    padding-top: 3px;
+    margin-left: 15px;
+    width: 30px;
+  }
+
+  .post-head {   
+  width: 97%;
+  padding: 20px 0px;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  position: relative;
+  background-image: url(/images/bannerimage.jpg);
+  margin: 5px 11px 0px 20px;
+  }
+  .left {
+    width: 100%;
+    height:650px;
+    background-color:#ebeced;
+    margin: 20px 0px 0px 36px;
+  }
+  
+  .right {
+    width: 100%;
+    height:100%;
+    background-color: #ebeced;
+    margin: 20px 0px 0px 36px;
+  }
+  .playerSearch_Icon input{
+    width: 100%;
+    margin: 0px 0px 0px 40px;
+  }
+  .studyHomeImage img {
+    width: 85%;
+    margin: 100px 0px 0px 25px;
+  }
+  .column-center {
+    display: inline-block;
+    width: 100%;
+    background-color: #f27498;
+    height: 200px;
+    margin: 10px 5px 20px 2px;
+    border-radius: 2px;
+    background: url(/images/arnold-francisca-nPhl2x4fk2s-unsplash.jpg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+  }
+
+  .bloghistory{
+    position: fixed;
+    height: 3%;
+    width: 15%;
+    top:50%;
+    left:40%;
+    right:10px;
+    bottom:30px;
+    z-index:9999;
+    color:white;
+  }
+
+  .bloghistory button {
+    background-color: #3c436b;
+    color: #ffffff;
+    
+  }
+  
+  }
+
+  .bloghistory{
+    position: fixed;
+    height: 3%;
+    width: 9%;
+    top:94%;
+    left:47%;
+    right:10px;
+    bottom:20px;
+    z-index:9999;
+    color:white;
+  }
+
+  .bloghistory button {
+    background-color: #3c436b;
+    color: #ffffff;
+    border-color: #fff;
+  }
