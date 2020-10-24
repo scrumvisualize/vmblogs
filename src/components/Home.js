@@ -18,21 +18,27 @@ export default function Home() {
     const [totalVisit, setTotalVisit] = useState(initialCount);
     const increment = () => setTotalVisit(totalVisit + 1);
     const [loadItems, setLoadItems] = useState(6);
+    const currentDate = Moment().format("MMM DD YYYY");
+    const dateTo = Moment().subtract(14, 'days').format('MMM DD YYYY');
 
 
     /* In the Home tab, system displays all the published blogs from contentful website. 
-       We can search for the blogs in the search area provided. Also on click on the tags
-       should filter the blogs records in Home page. */
+    /* Searching for the blogs in the search area is possible. Also on click on the tags
+    /* should filter the blogs records in Home page. On click on Load more will display next 
+    /* set of blogs if they are available.*/
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
     }
 
+    /* Send a GET request to server and get the blog data from contentful website and display 
+    /* in the Home page */
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const res = await axios.get('http://localhost:5000/service/blogpost');
                 setSearchResults(res.data.items);
+                console.log(res.data.items);
             } catch (e) {
                 console.log(e);
             }
@@ -41,6 +47,7 @@ export default function Home() {
     }, []);
 
 
+    /* Type text related to blog post in the search field will filter the blog and display on Home page */
     const results = React.useMemo(
         () =>
             searchResults.filter(blog => {
@@ -51,6 +58,7 @@ export default function Home() {
     );
 
 
+    /* On click on each tag, system will filter the blog records on the Home page, similar to search */
     const getFilterTags = (event) => {
         const tagText = event.target.innerText;
         console.log("Print tag of a:" + tagText);
@@ -60,6 +68,8 @@ export default function Home() {
         setSearchResults(results);
     }
 
+
+    /* On click on each blog post, function will be invoked and set a random color to the tags*/
     const randomizedHex = (tags) => {
         setFindTag(tags);
         console.log("Print tag of a:" + tags);
@@ -67,12 +77,14 @@ export default function Home() {
         setShowColor(randomColor);
     }
 
-
+    /* On click add a counter, counter gets incremented and update the counter value to localStorage*/
     useEffect(() => {
         localStorage.setItem('sitevisits', totalVisit)
     }, [totalVisit])
 
 
+    /*On click on Load more button, system will display next set of 6 blogs on page if they are available. 
+    /* By default system will display 6 blogs only */
     const showMoreBlogs = () => {
         setLoadItems((preValue) => preValue + 6);
     }
@@ -138,6 +150,13 @@ export default function Home() {
                             {
                                 results.slice(0, loadItems).map(({ sys: { id, createdAt }, fields: { title, image, shortDescription, description, tags, skillLevel, duration, slug } }) => (
                                     <div key={id} id="blogpostEach" className="column-center">
+                                        {
+                                            Moment(createdAt).format('MMM DD YYYY') == currentDate || Moment(createdAt).format('MMM DD YYYY') <= dateTo ? (
+                                                <span className="newStatus">new</span>
+                                            ) : (
+                                                    <span></span>
+                                                )
+                                        }
                                         <article onClick={() => randomizedHex(tags)} key={id} className="blogmaintile">
                                             {/*<img className="blogImage" key={image.fields.file.url} src={image.fields.file.url} alt="myImage"></img>*/}
                                             <div className="blogtitle">
