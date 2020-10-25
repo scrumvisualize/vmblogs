@@ -95,12 +95,15 @@ export default function Home() {
 
         return (
             <div onClick={increment} className="wrap">
-                <div className="post-head">
-                    <div className="container align-center">
-                        <h2>Vinod Mathew</h2>
-                        <p>sharing my knowledge {totalVisit}</p>
-                    </div>
+                <div className="">
+                    <span className="mainheading-line">VINOD MATHEW</span>
+                    <div className="header-tagline">Automation Engineer</div>
                 </div>
+                {/*<div className="post-head">
+                    <div className="container align-center">
+                        <p>{totalVisit}</p>
+                    </div>
+                </div>*/}
                 <div className="row">
                     <div className="column left" >
                         <h3>Search</h3>
@@ -139,9 +142,11 @@ export default function Home() {
                         <div>
                             <small className="copyright">© 2020 vinod mathew </small>
                         </div>
-
                         <div className="studyHomeImage">
-                            <img src="/images/vm.jpg"></img>
+                            <img src="/images/Book.png"></img>
+                        </div>
+                        <div className="container align-center">
+                          <p>{totalVisit}</p>
                         </div>
                     </div>
                     <div className="column right" >

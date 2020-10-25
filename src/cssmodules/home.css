@@ -6,6 +6,7 @@
     text-align: center;
   }
 
+
   .logo_image img{
     float: left;
     padding-left: 10px;
@@ -17,7 +18,14 @@
     width:100%;
   }
   .mob_link{
-      margin: 0px 20px 10px 0px;
+    margin: 0px 20px 10px 0px;
+    font-family: bebas-neue;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #222;
   }
 
   .column {
@@ -52,8 +60,8 @@
     margin: 20px 0px 80px 30px;
     border-radius: 2px;
     background: url('/images/arnold-francisca-nPhl2x4fk2s-unsplash.jpg');
-background-size: 300px;
-background-repeat: no-repeat;
+    background-size: 300px;
+    background-repeat: no-repeat;
 }
 
 .loadingIcon p {
@@ -185,18 +193,7 @@ margin-top: 20px;
 .studyHomeImage img {
   height: 200px;
   width: 180px;
-  margin: 140px 0px 0px 2px;
-}
-
-.post-head {
-  padding: 20px 0px;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  position: relative;
-  margin-bottom: 10px;
-  background-image: url('/images/bannerimage.jpg');
-  margin-top: 5px;
+  margin: 20px 0px 0px 2px;
 }
 
 .align-center h2, p{
@@ -204,8 +201,34 @@ text-align: center;
 margin:0 auto;
 }
 
+.mainheading-line{
+  padding-left: 10px;
+  font-family: bebas-neue;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 33px;
+  letter-spacing: 0em;
+  line-height: .8em;
+  text-transform: capitalize;
+  color: #222;
+}
 
-
+.header-tagline{
+    padding-left: 18px;
+    max-width: 40em;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-transform: none;
+    font-family: sofia-pro;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: .24em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #222;
+}
 
 @media only screen and (max-width: 1024px){
 
@@ -290,7 +313,8 @@ margin: 5px 11px 0px 20px;
   }
   .studyHomeImage img {
     width: 85%;
-    margin: 100px 0px 0px 25px;
+    height: 5%;
+    margin: 25px 0px 0px 24px;
   }
   .column-center {
     display: inline-block;
@@ -321,6 +345,47 @@ margin: 5px 11px 0px 20px;
     color: #ffffff;
     
   }
+
+  .mainheading-line{
+    padding-left: 90px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-family: bebas-neue;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0em;
+    line-height: .8em;
+    text-transform: capitalize;
+    color: #222;
+  }
+  
+  .header-tagline{
+      padding-left: 95px;
+      max-width: 40em;
+      font-family: Arial,Helvetica,sans-serif;
+      font-weight: 200;
+      letter-spacing: 0em;
+      text-transform: none;
+      font-family: sofia-pro;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 8px;
+      letter-spacing: .24em;
+      line-height: 1em;
+      text-transform: uppercase;
+      color: #222;
+  }
+
+  .mob_link{
+    margin: 0px 15px 10px 0px;
+    font-family: bebas-neue;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #222;
+  }
   
   }
 
@@ -347,7 +412,7 @@ margin: 5px 11px 0px 20px;
     height: 20px;
     width: 20px;
     border-radius: 10px;
-    background-color: rgb(222, 224, 77);
+    background-color: #f2d855;
     float: right;
     font-size: x-small;
     padding-bottom: 10px 10px 10px 10px;
