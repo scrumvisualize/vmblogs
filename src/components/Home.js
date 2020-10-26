@@ -154,38 +154,40 @@ export default function Home() {
                         <div className="container">
                             {
                                 results.slice(0, loadItems).map(({ sys: { id, createdAt }, fields: { title, image, shortDescription, description, tags, skillLevel, duration, slug } }) => (
-                                    <div key={id} id="blogpostEach" className="column-center">
-                                        {
-                                            Moment(createdAt).format('MMM DD YYYY') == currentDate || Moment(createdAt).format('MMM DD YYYY') <= dateTo ? (
-                                                <span className="newStatus">new</span>
-                                            ) : (
-                                                    <span></span>
-                                                )
-                                        }
-                                        <article onClick={() => randomizedHex(tags)} key={id} className="blogmaintile">
-                                            {/*<img className="blogImage" key={image.fields.file.url} src={image.fields.file.url} alt="myImage"></img>*/}
-                                            <div className="blogtitle">
-                                                <span key={title}>{title}</span>
-                                            </div>
-                                            <section>
-                                                <p className="blogdescription" key={shortDescription}>{shortDescription}</p>
-                                                <span className="blogcreateddate" key={createdAt}>{Moment(createdAt).format('MMM DD YYYY')}</span>
-                                                <span style={{ display: "none" }} key={tags}>{tags}</span>
-                                            </section>
-                                            <section>
-                                                <p className="bloglongdescription" key={description}>{description}</p>
-                                            </section>
-                                            <section className="col1">
-                                                {
-                                                    <span className="difftags" key={skillLevel} >{skillLevel}</span>
-                                                }
-                                            </section>
-                                            <span className="blogduration" key={duration} >{duration} min</span>
-                                            <section className="col2">
-                                                <a href={slug}>...more {'>'}{'>'}</a>
-                                            </section>
-                                        </article>
-                                    </div>
+                                    
+                                        <div key={id} id="blogpostEach" className="column-center">
+                                            {
+                                                Moment(createdAt).format('MMM DD YYYY') == currentDate || Moment(createdAt).format('MMM DD YYYY') <= currentDate && Moment(createdAt).format('MMM DD YYYY') >= dateTo ? (
+                                                    <span className="newStatus">new</span>
+                                                ) : (
+                                                        <span></span>
+                                                    )
+                                            }
+                                            <article onClick={() => randomizedHex(tags)} key={id} className="blogmaintile">
+                                                {/*<img className="blogImage" key={image.fields.file.url} src={image.fields.file.url} alt="myImage"></img>*/}
+                                                <div className="blogtitle">
+                                                    <span key={title}>{title}</span>
+                                                </div>
+                                                <section>
+                                                    <p className="blogdescription" key={shortDescription}>{shortDescription}</p>
+                                                    <span className="blogcreateddate" key={createdAt}>{Moment(createdAt).format('MMM DD YYYY')}</span>
+                                                    <span style={{ display: "none" }} key={tags}>{tags}</span>
+                                                </section>
+                                                <section>
+                                                    <p className="bloglongdescription" key={description}>{description}</p>
+                                                </section>
+                                                <section className="col1">
+                                                    {
+                                                        <span className="difftags" key={skillLevel} >{skillLevel}</span>
+                                                    }
+                                                </section>
+                                                <span className="blogduration" key={duration} >{duration} min</span>
+                                                <section className="col2">
+                                                    <a href={slug}>...more {'>'}{'>'}</a>
+                                                </section>
+                                            </article>
+                                        </div>
+                                    
                                 ))
                             }
                         </div>

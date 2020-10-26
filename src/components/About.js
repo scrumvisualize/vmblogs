@@ -25,6 +25,11 @@ const About = () => {
                 <p>Something to add here</p>
            </div>
         </div>
+        <div className="container">
+            <div className="row">
+               
+            </div>
+        </div>
     </div>
     )
 
