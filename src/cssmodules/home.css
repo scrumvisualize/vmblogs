@@ -66,11 +66,10 @@
 .column-center{ 
     display: inline-block;
     width: 30%;
-    background-color: #f27498;
     height: 200px;
     margin: 20px 0px 80px 30px;
     border-radius: 2px;
-    background: url('/images/arnold-francisca-nPhl2x4fk2s-unsplash.jpg');
+    background: url('/images/blogimage.JPG');
     background-size: 300px;
     background-repeat: no-repeat;
 }
@@ -106,6 +105,7 @@
   margin-top: 50px;
   width: 200px;
   margin-left: 50px;
+  background-color: #397f99;
 }
 
 .blogdescription{
@@ -278,7 +278,7 @@ margin: 5px 11px 0px 20px;
   height: 200px;
   margin: 10px 5px 20px 2px;
   border-radius: 2px;
-  background: url(/images/arnold-francisca-nPhl2x4fk2s-unsplash.jpg);
+  background: url('/images/blogimage.JPG');
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -310,7 +310,7 @@ margin: 5px 11px 0px 20px;
   background-position: center;
   color: #ffffff;
   position: relative;
-  background-image: url(/images/bannerimage.jpg);
+  background-image: url('/images/blogimage.JPG');
   margin: 5px 11px 0px 20px;
   }
   .left {
@@ -332,8 +332,7 @@ margin: 5px 11px 0px 20px;
   }
   .studyHomeImage img {
     width: 85%;
-    height: 5%;
-    margin: 25px 0px 0px 24px;
+    margin: 15px 0px 0px 24px;
   }
   .column-center {
     display: inline-block;
@@ -342,7 +341,7 @@ margin: 5px 11px 0px 20px;
     height: 200px;
     margin: 10px 5px 20px 2px;
     border-radius: 2px;
-    background: url(/images/arnold-francisca-nPhl2x4fk2s-unsplash.jpg);
+    background: url('/images/blogimage.JPG');
     background-size: 300px;
     background-repeat: no-repeat;
   }
@@ -451,7 +450,7 @@ margin: 5px 11px 0px 20px;
     
     .right {
       width: 79%;
-      height:650px;
+      height:800px;
       background-color: #f5f5f5;
       margin: 20px 10px 0px 10px;
     }
@@ -463,10 +462,9 @@ margin: 5px 11px 0px 20px;
 
     .column-center {
       display: inline-block;
-      background-color: #f27498;
       height: 200px;
       border-radius: 2px;
-      background: url(/images/arnold-francisca-nPhl2x4fk2s-unsplash.jpg);
+      background: url('/images/blogimage.JPG');
       background-size: 100%;
       background-repeat: no-repeat;
     }
@@ -504,7 +502,7 @@ margin: 5px 11px 0px 20px;
     
     .right {
       width: 79%;
-      height:650px;
+      height:800px;
       background-color: #f5f5f5;
       margin: 20px 10px 0px 10px;
     }
@@ -519,7 +517,7 @@ margin: 5px 11px 0px 20px;
       background-color: #f27498;
       height: 200px;
       border-radius: 2px;
-      background: url(/images/arnold-francisca-nPhl2x4fk2s-unsplash.jpg);
+      background: url('/images/blogimage.JPG');
       background-size: 100%;
       background-repeat: no-repeat;
     }
@@ -528,19 +526,19 @@ margin: 5px 11px 0px 20px;
       background-color: #f5f7f8;
       width:50%;
       height:65px;
-      margin: 10px 0px 0px 350px;
+      margin: 10px 0px 0px 480px;
       padding-top:10px ;
     }
   
     .playerSearch_Icon input{
       width: 100%;
-      margin: 0px 0px 0px 9px;
+      margin: 0px 0px 0px 35px;
     }
 
     .studyHomeImage img {
       width: 210px;
       height: 200px;
-      margin: 20px 0px 0px -1px;
+      margin: 20px 0px 0px 40px;
     }
   
   }

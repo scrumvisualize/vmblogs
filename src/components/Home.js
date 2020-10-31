@@ -154,7 +154,7 @@ export default function Home() {
                             <small className="copyright">© 2020 vinod mathew </small>
                         </div>
                         <div className="studyHomeImage">
-                            <img src="/images/Book.png"></img>
+                            <img src="/images/leftsideimage.JPG"></img>
                         </div>
                         <div className="container align-center">
                           <p>{totalVisit}</p>
