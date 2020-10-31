@@ -8,8 +8,9 @@ const About = () => {
         <div className="leftside_about">
             <h3>About me</h3>
             <p>I am an automation engineer with good knowledge of automation technologies. 
-             I love structure and order and I also stand for quality. 
-             I love spending time on fixing little details and optimizing web apps.</p>
+               I love to code in React js and would like try different features of react.
+               I love spending time on fixing little details and optimizing web apps.
+             </p>
         </div>
         <div className="rightside_about">
            <img src="images/Book.png"></img>

@@ -5,6 +5,8 @@ import Moment from 'moment';
 import { Wave } from "react-animated-text";
 import axios from "axios";
 import html2canvas from 'html2canvas';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
 
@@ -86,9 +88,18 @@ export default function Home() {
     /*On click on Load more button, system will display next set of 6 blogs on page if they are available. 
     /* By default system will display 6 blogs only */
     const showMoreBlogs = () => {
-        setLoadItems((preValue) => preValue + 6);
+        setLoadItems((preValue) => preValue + 3);
     }
 
+    const notify = () => toast.success("🦄 Loading your blogs !",{
+        position:"top-right",
+        autoClose:5000,
+        hideProgressBar:false,
+        newestOnTop:false,
+        closeOnClick:true,
+        draggable:true,
+        progress:undefined
+    });
 
     const renderPosts = () => {
         if (isLoading) return (<div className="loadingIcon"> <p className="noSearchData">Loading...</p> </div>);
@@ -193,16 +204,18 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="bloghistory">
-                        <button onClick={showMoreBlogs}>Load more...</button>
+                        <button onClick={showMoreBlogs, notify}>Load more...</button>
                     </div>
                 </div>
-            </div>
+            </div> 
         )
     };
 
     return (
         <div className="posts__container">
             <div className="posts">{renderPosts()}</div>
+            <ToastContainer>
+            </ToastContainer>
         </div>
     );
 }
