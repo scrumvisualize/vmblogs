@@ -137,7 +137,7 @@ export default function Home() {
                                                     <a onClick={getFilterTags} className="grouptechtags" style={{ backgroundColor: `${showColor}` }, { marginRight: "10px" }} key={tag}>{tag}</a>
                                                 ))
                                             ) : (
-                                                    <a onClick={getFilterTags} style={{ backgroundColor: `${showColor}` }} className="grouptechtags">{tags}</a>
+                                                    <a onClick={getFilterTags} style={{ backgroundColor: `${showColor}` }} className="grouptechtags" key={tags}>{tags}</a>
                                                 )
                                         }
                                     </div>
@@ -204,7 +204,10 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="bloghistory">
-                        <button onClick={showMoreBlogs, notify}>Load more...</button>
+                        <button onClick={ () => {
+                            notify()
+                            showMoreBlogs()
+                            }}>Load more...</button>
                     </div>
                 </div>
             </div> 

@@ -8,16 +8,24 @@ const About = () => {
         <div className="leftside_about">
             <h3>About me</h3>
             <p>I am an automation engineer with good knowledge of automation technologies. 
-               I love to code in React js and would like try different features of react.
-               I love spending time on fixing little details and optimizing web apps.
-             </p>
+               I 💙❤️ to code in React js and would like to explore different features of react.
+               I was longing to create a blog site to share some of the things i learned over the years.
+            </p>
+            <p>I am an automation engineer with good knowledge of automation technologies. 
+               I love to code in React js and would like to explore different features of react.
+               I was longing to create a blog site to share some of the things i learned over the years.
+            </p>
+            <p>I am an automation engineer with good knowledge of automation technologies. 
+               I love to code in React js and would like to explore different features of react.
+               I was longing to create a blog site to share some of the things i learned over the years.
+            </p>
         </div>
         <div className="rightside_about">
            <img src="images/Book.png"></img>
         </div>
         <div className="container">
            <div className="box1">
-                <p>Something to add here</p>
+                <p>⚽</p>
            </div>
            <div className="box2">
                 <p>Something to add here</p>
@@ -27,9 +35,11 @@ const About = () => {
            </div>
         </div>
         <div className="container">
-            <div className="row">
-               
-            </div>
+           <div className="row">
+               <div className="middlesection image">
+                    <img src="/images/leftsideimage.JPG"></img>
+               </div>
+           </div>
         </div>
     </div>
     )

@@ -61,6 +61,13 @@ background-color: #f5f5f5;
 margin: 20px 0px 10px 0px;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
 }
 
 .box1{
@@ -96,15 +103,11 @@ margin: 20px 10px 10px 0px;
     margin: 10px 0px 0px 50px;
 }
 
-.plusIcon{
-  width:20px;
-  height:20px;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight:bold;
-  background-color: rgb(90, 167, 212);
-  text-align: center;
+.middlesection img{
+  width:96%;
+  height: 90%;
+  margin-left: 15px;
+  padding-right: 6px;
 }
 
 .leftside_about p {

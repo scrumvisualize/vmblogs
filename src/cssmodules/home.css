@@ -9,10 +9,10 @@
 
   .logo_image img{
     float: left;
-    padding-left: 10px;
+    padding-left: 0px;
     padding-top: 3px;
     margin-left: 0px;
-    width: 30px;
+    width: 10px;
   }
   .siteNavigation_nav_links{
     width:100%;
@@ -299,8 +299,8 @@ margin: 5px 11px 0px 20px;
   .logo_image img{
     float: left;
     padding-top: 3px;
-    margin-left: 15px;
-    width: 30px;
+    margin-left: 0px;
+    width: 10px;
   }
 
   .post-head {   
@@ -313,6 +313,7 @@ margin: 5px 11px 0px 20px;
   background-image: url('/images/blogimage.JPG');
   margin: 5px 11px 0px 20px;
   }
+
   .left {
     width: 100%;
     height:480px;
@@ -328,7 +329,7 @@ margin: 5px 11px 0px 20px;
   }
   .playerSearch_Icon input{
     width: 100%;
-    margin: 0px 0px 0px 40px;
+    margin: 0px 0px 0px 35px;
   }
   .studyHomeImage img {
     width: 85%;
@@ -404,7 +405,7 @@ margin: 5px 11px 0px 20px;
     text-transform: uppercase;
     color: #222;
   }
-  
+
   }
 
   .bloghistory{
