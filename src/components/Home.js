@@ -4,14 +4,13 @@ import { usePosts } from "../custom-hooks/";
 import Moment from 'moment';
 import { Wave } from "react-animated-text";
 import axios from "axios";
-import html2canvas from 'html2canvas';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
 
     //const [posts, isLoading] = usePosts();
-    const [isLoading] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [showColor, setShowColor] = useState("");
@@ -36,16 +35,19 @@ export default function Home() {
     /* Send a GET request to server and get the blog data from contentful website and display 
     /* in the Home page */
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await axios.get('http://localhost:5000/service/blogpost');
-                setSearchResults(res.data.items);
-                console.log(res.data.items);
-            } catch (e) {
-                console.log(e);
+        setTimeout(() => {
+            const fetchData = async () => {
+                try {
+                    const res = await axios.get('http://localhost:5000/service/blogpost');
+                    setSearchResults(res.data.items);
+                    console.log(res.data.items);
+                    setIsLoading(false);
+                } catch (e) {
+                    console.log(e);
+                }
             }
-        }
-        fetchData();
+            fetchData();
+        }, 1500)
     }, []);
 
 
@@ -91,18 +93,17 @@ export default function Home() {
         setLoadItems((preValue) => preValue + 3);
     }
 
-    const notify = () => toast.success("🦄 Loading your blogs !",{
-        position:"top-right",
-        autoClose:5000,
-        hideProgressBar:false,
-        newestOnTop:false,
-        closeOnClick:true,
-        draggable:true,
-        progress:undefined
+    const notify = () => toast.success("🦄 Loading your blogs !", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        newestOnTop: false,
+        closeOnClick: true,
+        draggable: true,
+        progress: undefined
     });
 
     const renderPosts = () => {
-        if (isLoading) return (<div className="loadingIcon"> <p className="noSearchData">Loading...</p> </div>);
 
         return (
             <div onClick={increment} className="wrap">
@@ -110,107 +111,115 @@ export default function Home() {
                     <span className="mainheading-line">VINOD MATHEW</span>
                     <div className="header-tagline">Automation Engineer</div>
                 </div>
-                {/*<div className="post-head">
-                    <div className="container align-center">
-                        <p>{totalVisit}</p>
+                { isLoading ? (
+                    <div className="loader">
+                        <div className="bubble"></div>
+                        <div className="bubble"></div>
+                        <div className="bubble"></div>
+                        <div className="bubble"></div>
                     </div>
-                </div>*/}
-                <div className="row">
-                    <div className="column left" >
-                        <h3>Search</h3>
-                        <label>
-                            <div className="playerSearch_Home">
-                                <div className="playerSearch_Icon">
-                                    <input type="text" className="playerSearch_Home_Input" placeholder="search posts..." value={searchTerm} onChange={handleChange} />
-                                </div>
+                ) : (
 
-                            </div>
-                        </label>
-                        <h3>Tags</h3>
-                        <label>
-                            {
-                                searchResults.map(({ fields: { id, tags } }) => (
-                                    <div key={id} className="techtags">
-                                        {
-                                            Array.isArray(tags) ? (
-                                                tags.map((tag) => (
-                                                    <a onClick={getFilterTags} className="grouptechtags" style={{ backgroundColor: `${showColor}` }, { marginRight: "10px" }} key={tag}>{tag}</a>
-                                                ))
-                                            ) : (
-                                                    <a onClick={getFilterTags} style={{ backgroundColor: `${showColor}` }} className="grouptechtags" key={tags}>{tags}</a>
-                                                )
-                                        }
-                                    </div>
-                                ))
-                            }
-                        </label>
-                        <div className="twitterlink">
-                            <a href="">Follow me on twitter</a>
-                        </div>
-                        <div className="reactStunning">
-                            🛠️ Built with react...!
-                        </div>
-                        <div>
-                            <small className="copyright">© 2020 vinod mathew </small>
-                        </div>
-                        <div className="studyHomeImage">
-                            <img src="/images/leftsideimage.JPG"></img>
-                        </div>
-                        <div className="container align-center">
-                          <p>{totalVisit}</p>
-                        </div>
-                    </div>
-                    <div className="column right" >
-                        {!results.length && (<div> <div className="noSearchData"><Wave text="No results available...!" /></div> </div>)}
-                        <div className="container">
-                            {
-                                results.slice(0, loadItems).map(({ sys: { id, createdAt }, fields: { title, image, shortDescription, description, tags, skillLevel, duration, slug } }) => (
-                                    
-                                        <div key={id} id="blogpostEach" className="column-center">
-                                            {
-                                                Moment(createdAt).format('MMM DD YYYY') == currentDate || Moment(createdAt).format('MMM DD YYYY') <= currentDate && Moment(createdAt).format('MMM DD YYYY') >= dateTo ? (
-                                                    <span className="newStatus">new</span>
-                                                ) : (
-                                                        <span></span>
-                                                    )
-                                            }
-                                            <article onClick={() => randomizedHex(tags)} key={id} className="blogmaintile">
-                                                {/*<img className="blogImage" key={image.fields.file.url} src={image.fields.file.url} alt="myImage"></img>*/}
-                                                <div className="blogtitle">
-                                                    <span key={title}>{title}</span>
-                                                </div>
-                                                <section>
-                                                    <p className="blogdescription" key={shortDescription}>{shortDescription}</p>
-                                                    <span className="blogcreateddate" key={createdAt}>{Moment(createdAt).format('MMM DD YYYY')}</span>
-                                                    <span style={{ display: "none" }} key={tags}>{tags}</span>
-                                                </section>
-                                                <section>
-                                                    <p className="bloglongdescription" key={description}>{description}</p>
-                                                </section>
-                                                <section className="col1">
-                                                    {
-                                                        <span className="difftags" key={skillLevel} >{skillLevel}</span>
-                                                    }
-                                                </section>
-                                                <span className="blogduration" key={duration} >{duration} min</span>
-                                                <section className="col2">
-                                                    <a href={slug}>...more {'>'}{'>'}</a>
-                                                </section>
-                                            </article>
+                        <div className="row">
+                            <div className="column left" >
+                                <h3>Search</h3>
+                                <label>
+                                    <div className="playerSearch_Home">
+                                        <div className="playerSearch_Icon">
+                                            <input type="text" className="playerSearch_Home_Input" placeholder="search posts..." value={searchTerm} onChange={handleChange} />
                                         </div>
-                                    
-                                ))
-                            }
+
+                                    </div>
+                                </label>
+                                <h3>Tags</h3>
+                                <label>
+                                    {
+                                        searchResults.map(({ fields: { id, tags } }) => (
+                                            <div key={id} className="techtags">
+                                                {
+                                                    Array.isArray(tags) ? (
+                                                        tags.map((tag) => (
+                                                            <a onClick={getFilterTags} className="grouptechtags" style={{ backgroundColor: `${showColor}` }, { marginRight: "10px" }} key={tag}>{tag}</a>
+                                                        ))
+                                                    ) : (
+                                                            <a onClick={getFilterTags} style={{ backgroundColor: `${showColor}` }} className="grouptechtags" key={tags}>{tags}</a>
+                                                        )
+                                                }
+                                            </div>
+                                        ))
+                                    }
+                                </label>
+                                <div className="twitterlink">
+                                    <a href="">Follow me on twitter</a>
+                                </div>
+                                <div className="reactStunning">
+                                    🛠️ Built with react...!
                         </div>
-                    </div>
-                    <div className="bloghistory">
-                        <button onClick={ () => {
-                            notify()
-                            showMoreBlogs()
-                            }}>Load more...</button>
-                    </div>
-                </div>
-            </div> 
+                                <div>
+                                    <small className="copyright">© 2020 vinod mathew </small>
+                                </div>
+                                <div className="studyHomeImage">
+                                    <img src="/images/leftsideimage.JPG"></img>
+                                </div>
+                                <div className="container align-center">
+                                    <p>{totalVisit}</p>
+                                </div>
+                            </div>
+                            <div className="column right" >
+                                {!results.length && (<div> <div className="noSearchData"><Wave text="No results available...!" /></div> </div>)}
+                                <div className="container">
+                                    {
+                                        results.slice(0, loadItems).map(({ sys: { id, createdAt, updatedAt }, fields: { title, image, shortDescription, description, tags, skillLevel, duration, slug } }) => (
+
+                                            <div key={id} id="blogpostEach" className="column-center">
+                                                {
+                                                    Moment(createdAt).format('MMM DD YYYY') === currentDate || Moment(updatedAt).format('MMM DD YYYY') === currentDate || Moment(createdAt).format('MMM DD YYYY') <= currentDate && Moment(createdAt).format('MMM DD YYYY') >= dateTo ? (
+                                                        <span className="newStatus">new</span>
+                                                    ) : (
+                                                            <span></span>
+                                                        )
+                                                }
+                                                <article onClick={() => randomizedHex(tags)} key={id} className="blogmaintile">
+                                                    <div className="blogback">
+                                                        {/*<img className="blogImage" key={image.fields.image} src={image.fields.image} alt="myImage"></img>*/}
+                                                    </div>
+                                                    <div className="blogtitle">
+                                                        <span key={title}>{title}</span>
+                                                    </div>
+                                                    <section>
+                                                        <p className="blogdescription" key={shortDescription}>{shortDescription}</p>
+                                                        <span className="blogcreateddate" key={createdAt}>{Moment(createdAt).format('MMM DD YYYY')}</span>
+                                                        <span style={{ display: "none" }} key={tags}>{tags}</span>
+                                                    </section>
+                                                    <section>
+                                                        <p className="bloglongdescription" key={description}>{description}</p>
+                                                    </section>
+                                                    <section className="col1">
+                                                        {
+                                                            <span className="difftags" key={skillLevel} >{skillLevel}</span>
+                                                        }
+                                                    </section>
+                                                    <span className="blogduration" key={duration} >{duration} min</span>
+                                                    <section className="col2">
+                                                        <a href={slug}>...more {'>'}{'>'}</a>
+                                                    </section>
+                                                </article>
+                                            </div>
+
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                            <div className="bloghistory">
+                                <button onClick={() => {
+                                    notify()
+                                    showMoreBlogs()
+                                }}>Load more...</button>
+                            </div>
+                        </div>
+                    )
+                }
+            </div>
         )
     };
 
