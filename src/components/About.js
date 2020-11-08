@@ -24,11 +24,11 @@ const About = () => {
         <div className="container">
            <div className="box1">
               <div className="about_left_soccer">
-                  <p>⚽</p>
                   <img></img>
               </div>
               <div className="about_right_soccer">
-                  <p>I play soccer couple of days in a week. I feel motivated while during the game and this keeps my spirits high.</p>
+                  <p>I feel motivated while playing soccer. This is one of thing I enjoy the most and 
+                    always keeps my spirits high.</p>
               </div>
            </div>
            <div className="box2">
@@ -37,7 +37,7 @@ const About = () => {
                   <img src="/images/download.PNG"></img>
               </div>
               <div className="about_right_soccer">
-                  <p>One of the thing I enjoy a lot is building something using React</p>
+                  <p>Build something that makes you happy. I love building something using React</p>
                   
               </div>
            </div>
@@ -47,7 +47,7 @@ const About = () => {
                   <img src="/images/cypress.png"></img>
               </div>
               <div className="about_right_soccer">
-                  <p>Now I am working in Cypress automation tool. This is my daily job.</p>
+                  <p>Automation is another key area in my testing life. Cypress tool keeps me busy while working on that.</p>
               </div>
            </div>
         </div>

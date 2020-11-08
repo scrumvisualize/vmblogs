@@ -153,13 +153,23 @@ margin: 20px 10px 10px 0px;
 }
 .about_left_soccer{
   float:left;
-  width: 50%;
+  width: 40%;
   height:150px;
 }
 
 .about_right_soccer{
   float:left;
-  width: 50%;
+  width: 60%;
   height:150px;
 
 }
+.about_left_soccer img{
+  margin: 30px 5px 10px 5px
+}
+
+.about_right_soccer p{
+  display: block;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 20px 15px 10px 5px
+} 
