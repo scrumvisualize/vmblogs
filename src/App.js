@@ -10,6 +10,7 @@ import Navigation from './components/Navigation';
 import TutorialsList from './components/TutorialsList';
 import About from './components/About';
 import SinglePost from './components/SinglePost';
+import VideoPlayer from './components/VideoPlayer';
 
 
 function App() {

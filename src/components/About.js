@@ -1,8 +1,10 @@
 
 import React, { useState, useEffect} from 'react';
+import VideoPlayer from './VideoPlayer';
+
 
 const About = () => {
-
+    
     return (
     <div className="wrap">
         <div className="leftside_about">
@@ -24,7 +26,7 @@ const About = () => {
         <div className="container">
            <div className="box1">
               <div className="about_left_soccer">
-                  <img></img>
+                    
               </div>
               <div className="about_right_soccer">
                   <p>I feel motivated while playing soccer. This is one of thing I enjoy the most and 
@@ -57,6 +59,23 @@ const About = () => {
                     <img src="/images/leftsideimage.JPG"></img>
                </div>
            </div>
+        </div>
+        <div className="container">
+           <div className="row">
+               <form name="blogsubscriber" className="blogsubscriber"> 
+                    <input type="text" name="subscribe" className="subscribe email" required></input>
+                    <button className="subscribe button">Subscribe</button>
+               </form>
+           </div>
+           <div className="blogvideo">
+                    
+            </div>
+        </div>
+
+        <div className="container">
+            <div className="row">
+                <VideoPlayer/>
+            </div>
         </div>
     </div>
     )
