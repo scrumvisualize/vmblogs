@@ -207,13 +207,13 @@ margin: 20px 10px 10px 0px;
 .about_left_soccer{
   float:left;
   width: 40%;
-  height:250px;
+  height:200px;
 }
 
 .about_right_soccer{
   float:left;
   width: 60%;
-  height:250px;
+  height:200px;
 
 }
 .about_left_soccer img{
@@ -241,7 +241,7 @@ margin: 20px 10px 10px 0px;
   position: absolute;
   width: 1100px !important;
   height: 700px !important;
-  margin: 10px 10px 15px 17px;
+  margin: 50px 10px 15px 17px;
   background:linear-gradient(to right,rgba(178, 165, 216, 0.4),rgba(179, 161, 177, 0.3));
 }
 

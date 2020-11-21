@@ -18,7 +18,7 @@ export default function Home() {
     const initialCount = () => Number(window.localStorage.getItem('sitevisits') || 0);
     const [totalVisit, setTotalVisit] = useState(initialCount);
     const increment = () => setTotalVisit(totalVisit + 1);
-    const [loadItems, setLoadItems] = useState(6);
+    const [loadItems, setLoadItems] = useState(3);
     const currentDate = Moment().format("MMM DD YYYY");
     const dateTo = Moment().subtract(14, 'days').format('MMM DD YYYY');
 
@@ -47,7 +47,7 @@ export default function Home() {
                 }
             }
             fetchData();
-        }, 1500)
+        }, 1000)
     }, []);
 
 

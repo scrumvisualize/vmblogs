@@ -39,7 +39,7 @@ const About = () => {
                   <img src="/images/download.PNG"></img>
               </div>
               <div className="about_right_soccer">
-                  <p>Build something that makes you happy. I love building something using React</p>
+                  <p>Building something in React that makes me happy. I keep on fiddling with new features in React</p>
                   
               </div>
            </div>
@@ -49,7 +49,7 @@ const About = () => {
                   <img src="/images/cypress.png"></img>
               </div>
               <div className="about_right_soccer">
-                  <p>Automation is another key area in my testing life. Cypress tool keeps me busy while working on that.</p>
+                  <p>Automation is one of the key area in the testing life cycle. The new tool Cypress keeps me busy while working on that.</p>
               </div>
            </div>
         </div>
