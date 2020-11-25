@@ -21,6 +21,8 @@ export default function Home() {
     const [loadItems, setLoadItems] = useState(3);
     const currentDate = Moment().format("MMM DD YYYY");
     const dateTo = Moment().subtract(14, 'days').format('MMM DD YYYY');
+    const [countk, setCountk] = useState(0);
+    
 
 
     /* In the Home tab, system displays all the published blogs from contentful website. 
@@ -83,6 +85,11 @@ export default function Home() {
 
     /* On click add a counter, counter gets incremented and update the counter value to localStorage*/
     useEffect(() => {
+        if(totalVisit >= 100){
+        const newVisit = (totalVisit)/1000; 
+        const roundVisit = newVisit.toFixed(2);
+        setCountk(roundVisit);
+        }
         localStorage.setItem('sitevisits', totalVisit)
     }, [totalVisit])
 
@@ -162,7 +169,7 @@ export default function Home() {
                                     <img src="/images/leftsideimage.JPG"></img>
                                 </div>
                                 <div className="container align-center">
-                                    <p>{totalVisit}</p>
+                                    <p>{countk}K</p>
                                 </div>
                             </div>
                             <div className="column right" >
