@@ -40,7 +40,6 @@ const About = () => {
               </div>
               <div className="about_right_soccer">
                   <p>Building something in React that makes me happy. I keep on fiddling with new features in React</p>
-                  
               </div>
            </div>
            <div className="box3">
@@ -67,11 +66,9 @@ const About = () => {
                     <button className="subscribe button">Subscribe</button>
                </form>
            </div>
-           <div className="blogvideo">
-                    
-            </div>
+           <div className="blogvideo">        
+           </div>
         </div>
-
         <div className="container">
             <div className="row">
                 <VideoPlayer/>

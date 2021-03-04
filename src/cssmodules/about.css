@@ -21,7 +21,7 @@ background-color: #f5f5f5;
     margin-left: 60px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 375px) {
     
 .leftside_about{
     width:95%;
@@ -30,13 +30,13 @@ background-color: #f5f5f5;
 }
 .rightside_about{
     width:95%;
-    margin: 100px 0px 0px 10px;
+    margin: 10px 0px 0px 10px;
     padding-right: 20px;
     float: left;
 }
 .rightside_about img {
-    width: 300px;
-    height: 200px;
+    width: 30px;
+    height: 30px;
     margin: 3px 0px 0px 8px;
 }
 .container {
@@ -44,19 +44,19 @@ width :100% !important;
 }
 .box1{
 float: left !important;
-width: 30% !important;
+width: 10% !important;
 background-color: #f5f5f5;
 margin: 20px 5px 10px 0px;
 }
 .box2{
 float: left !important;
-width: 30% !important;
+width: 10% !important;
 background-color: #f5f5f5;
 margin: 20px 5px 10px 0px;
 }
 .box3{
 float: left !important;
-width: 30% !important;
+width: 10% !important;
 background-color: #f5f5f5;
 margin: 20px 0px 10px 0px;
 }
@@ -169,22 +169,7 @@ margin: 20px 10px 10px 0px;
   text-justify: inter-word;
 }
 
-@media only screen and (min-width: 1920px){
 
-  .rightside_about {
-      width: 42%;
-      margin: 20px 0px 0px 10px;
-      padding-right: 20px;
-      float: left;
-      background-color: #f5f5f5;
-  }
-  .rightside_about img {
-    width: 400px;
-    height: 400px;
-    margin: 10px 0px 10px 200px;
-  }
-  
-}
 
 
 @media only screen and (min-width: 1400px){
@@ -249,4 +234,22 @@ margin: 20px 10px 10px 0px;
   position: relative;
   margin: 10px 10px 15px 17px;
   font-size: x-small;
+}
+
+@media only screen and (max-width: 1920px){
+
+  .rightside_about {
+      width: 42%;
+      margin: 20px 0px 0px 10px;
+      padding-right: 20px;
+      float: left;
+      background-color: #f5f5f5;
+  }
+  .rightside_about img {
+    width: 350px;
+    height: 350px;
+    margin: 25px 0px 20px 220px;
+    
+  }
+  
 }
