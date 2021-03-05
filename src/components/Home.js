@@ -40,7 +40,8 @@ export default function Home() {
         setTimeout(() => {
             const fetchData = async () => {
                 try {
-                    const res = await axios.get('http://localhost:5000/service/blogpost');
+                    // as netlify doesn't support rendering site via express server, so giving the url directly // http://localhost:5000/service/blogpost
+                    const res = await axios.get('https://cdn.contentful.com/spaces/pow48a9gxkua/entries?access_token=WSH1UgLbP7Pyonn7Fuf84-LiEO40kV1zZr_g5S9I4QQ&limit=1000&skip=0');
                     setSearchResults(res.data.items);
                     console.log(res.data.items);
                     setIsLoading(false);
