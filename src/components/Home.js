@@ -116,7 +116,7 @@ export default function Home() {
         return (
             <div onClick={increment} className="wrap">
                 <div className="">
-                    <span className="mainheading-line">VINOD MATHEW</span>
+                    <span className="mainheading-line">Soccerway</span>
                     <div className="header-tagline">Automation Engineer</div>
                 </div>
                 { isLoading ? (
@@ -164,13 +164,13 @@ export default function Home() {
                                     🛠️ Built with react...!
                         </div>
                                 <div>
-                                    <small className="copyright">© 2020 vinod mathew </small>
+                                    <small className="copyright">© 2020 soccerway </small>
                                 </div>
                                 <div className="studyHomeImage">
                                     <img src="/images/leftsideimage.JPG"></img>
                                 </div>
                                 <div className="container align-center">
-                                    <p>{countk}K</p>
+                                    <p>{countk}k</p>
                                 </div>
                             </div>
                             <div className="column right" >
